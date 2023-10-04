@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "eb501fcb-0c6a-49d7-98f5-8289ca7f35cf",
+		"name": "Challenge BCI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12637111"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/sign-up",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept-encoding": true,
+					"accept": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t   \"name\":\"Victor Albornoz\",\r\n\t\t   \"email\":\"vic@globallogic.com\",\r\n\t\t   \"password\":\"d1dsdSdsdsd2\",\r\n\t\t   \"phones\":[\r\n\t\t      {\r\n\t\t         \"number\":\"123456\",\r\n\t\t         \"cityCode\":1,\r\n\t\t         \"countryCode\":\"80\"\r\n\t\t      }\r\n\t\t   ]\r\n\t\t}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"token\":\"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2aWNAZ2xvYmFsbG9naWMuY29tIiwidXVpZCI6ImI4ZWUzMmI1OWIxZTQyMmVhMmRjOTg2MWNlOWU2ZjY0IiwiaWF0IjoxNjk2NDE4MzEwLCJleHAiOjE2OTY0MTgzNDZ9.fmFITTr4aysqL1FJUiF_Ma30fIRo4v06h--BXG6UcSM\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/sign-up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Victor Albornoz\",\r\n\"email\":\"vic@globallogic.com\",\r\n\"password\":\"d1dsdsdsdsd2\",\r\n\"phones\":[\r\n{\r\n\"number\":\"123456\",\r\n\"cityCode\":1,\r\n\"countryCode\":\"80\"\r\n}\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				},
+				"description": "contraseña invalida"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/user/sign-up",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Victor Albornoz\",\r\n\"email\":\"vic@globallogiccom\",\r\n\"password\":\"d1dsdSdsdsd2\",\r\n\"phones\":[\r\n{\r\n\"number\":\"123456\",\r\n\"cityCode\":1,\r\n\"countryCode\":\"80\"\r\n}\r\n]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				},
+				"description": "Formato mail incorrecto"
+			},
+			"response": []
+		}
+	]
+}
